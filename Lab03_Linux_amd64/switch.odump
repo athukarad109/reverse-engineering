@@ -1,0 +1,131 @@
+
+switch.o:     file format elf64-x86-64
+
+Sections:
+Idx Name          Size      VMA               LMA               File off  Algn
+  0 .text         00000050  0000000000000000  0000000000000000  00000040  2**0
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  1 .data         00000000  0000000000000000  0000000000000000  00000090  2**0
+                  CONTENTS, ALLOC, LOAD, DATA
+  2 .bss          00000000  0000000000000000  0000000000000000  00000090  2**0
+                  ALLOC
+  3 .debug_info   00000066  0000000000000000  0000000000000000  00000090  2**0
+                  CONTENTS, RELOC, READONLY, DEBUGGING, OCTETS
+  4 .debug_abbrev 0000004d  0000000000000000  0000000000000000  000000f6  2**0
+                  CONTENTS, READONLY, DEBUGGING, OCTETS
+  5 .debug_aranges 00000030  0000000000000000  0000000000000000  00000143  2**0
+                  CONTENTS, RELOC, READONLY, DEBUGGING, OCTETS
+  6 .debug_line   0000005a  0000000000000000  0000000000000000  00000173  2**0
+                  CONTENTS, RELOC, READONLY, DEBUGGING, OCTETS
+  7 .debug_str    0000006b  0000000000000000  0000000000000000  000001cd  2**0
+                  CONTENTS, READONLY, DEBUGGING, OCTETS
+  8 .debug_line_str 000000b7  0000000000000000  0000000000000000  00000238  2**0
+                  CONTENTS, READONLY, DEBUGGING, OCTETS
+  9 .comment      00000020  0000000000000000  0000000000000000  000002ef  2**0
+                  CONTENTS, READONLY
+ 10 .note.GNU-stack 00000000  0000000000000000  0000000000000000  0000030f  2**0
+                  CONTENTS, READONLY
+ 11 .eh_frame     00000038  0000000000000000  0000000000000000  00000310  2**3
+                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, DATA
+SYMBOL TABLE:
+0000000000000000 l    df *ABS*	0000000000000000 switch.c
+0000000000000000 l    d  .text	0000000000000000 .text
+0000000000000000 l    d  .debug_info	0000000000000000 .debug_info
+0000000000000000 l    d  .debug_abbrev	0000000000000000 .debug_abbrev
+0000000000000000 l    d  .debug_line	0000000000000000 .debug_line
+0000000000000000 l    d  .debug_str	0000000000000000 .debug_str
+0000000000000000 l    d  .debug_line_str	0000000000000000 .debug_line_str
+0000000000000000 g     F .text	0000000000000050 demo_switch
+
+
+Contents of section .text:
+ 0000 554889e5 897dfc83 7dfc0374 35837dfc  UH...}..}..t5.}.
+ 0010 037f3683 7dfc0274 22837dfc 027f2a83  ..6.}..t".}...*.
+ 0020 7dfc0074 08837dfc 017409eb 1cb8adde  }..t..}..t......
+ 0030 0000eb1a b8efbe00 00eb13b8 feca0000  ................
+ 0040 eb0cb8be ba0000eb 05b80000 00005dc3  ..............].
+Contents of section .debug_info:
+ 0000 62000000 05000108 00000000 01000000  b...............
+ 0010 000c0000 00000000 00000000 00000000  ................
+ 0020 00005000 00000000 00000000 00000200  ..P.............
+ 0030 00000001 01055e00 00000000 00000000  ......^.........
+ 0040 00005000 00000000 0000019c 5e000000  ..P.........^...
+ 0050 03630001 01155e00 00000291 6c000404  .c....^.....l...
+ 0060 05696e74 0000                        .int..          
+Contents of section .debug_abbrev:
+ 0000 01110125 0e130b03 1f1b1f11 01120710  ...%............
+ 0010 17000002 2e013f19 030e3a0b 3b0b390b  ......?...:.;.9.
+ 0020 27194913 11011207 40187a19 01130000  '.I.....@.z.....
+ 0030 03050003 083a0b3b 0b390b49 13021800  .....:.;.9.I....
+ 0040 00042400 0b0b3e0b 03080000 00        ..$...>......   
+Contents of section .debug_aranges:
+ 0000 2c000000 02000000 00000800 00000000  ,...............
+ 0010 00000000 00000000 50000000 00000000  ........P.......
+ 0020 00000000 00000000 00000000 00000000  ................
+Contents of section .debug_line:
+ 0000 56000000 05000800 2a000000 010101fb  V.......*.......
+ 0010 0e0d0001 01010100 00000100 00010101  ................
+ 0020 1f010000 00000201 1f020f02 00000000  ................
+ 0030 00000000 00000518 00090200 00000000  ................
+ 0040 00000001 05037505 14022613 75757505  ......u...&.uuu.
+ 0050 15750501 5a020200 0101               .u..Z.....      
+Contents of section .debug_str:
+ 0000 474e5520 43393920 31342e32 2e30202d  GNU C99 14.2.0 -
+ 0010 6d74756e 653d6765 6e657269 63202d6d  mtune=generic -m
+ 0020 61726368 3d783836 2d363420 2d67202d  arch=x86-64 -g -
+ 0030 4f30202d 7374643d 63393920 2d665049  O0 -std=c99 -fPI
+ 0040 43202d66 6173796e 6368726f 6e6f7573  C -fasynchronous
+ 0050 2d756e77 696e642d 7461626c 65730064  -unwind-tables.d
+ 0060 656d6f5f 73776974 636800             emo_switch.     
+Contents of section .debug_line_str:
+ 0000 2f686f6d 652f6b61 6c692f44 65736b74  /home/kali/Deskt
+ 0010 6f702f73 6f667477 6172655f 72657665  op/software_reve
+ 0020 7273652d 456e672f 72657665 7273652d  rse-Eng/reverse-
+ 0030 656e6769 6e656572 696e672f 4c616230  engineering/Lab0
+ 0040 335f4c69 6e75785f 616d6436 34007377  3_Linux_amd64.sw
+ 0050 69746368 2e63002f 686f6d65 2f6b616c  itch.c./home/kal
+ 0060 692f4465 736b746f 702f736f 66747761  i/Desktop/softwa
+ 0070 72655f72 65766572 73652d45 6e672f72  re_reverse-Eng/r
+ 0080 65766572 73652d65 6e67696e 65657269  everse-engineeri
+ 0090 6e672f4c 61623033 5f4c696e 75785f61  ng/Lab03_Linux_a
+ 00a0 6d643634 00737769 7463682e 63007377  md64.switch.c.sw
+ 00b0 69746368 2e6300                      itch.c.         
+Contents of section .comment:
+ 0000 00474343 3a202844 65626961 6e203134  .GCC: (Debian 14
+ 0010 2e322e30 2d313929 2031342e 322e3000  .2.0-19) 14.2.0.
+Contents of section .eh_frame:
+ 0000 14000000 00000000 017a5200 01781001  .........zR..x..
+ 0010 1b0c0708 90010000 1c000000 1c000000  ................
+ 0020 00000000 50000000 00410e10 8602430d  ....P....A....C.
+ 0030 06024b0c 07080000                    ..K.....        
+
+Disassembly of section .text:
+
+0000000000000000 <demo_switch>:
+   0:	55                   	push   rbp
+   1:	48 89 e5             	mov    rbp,rsp
+   4:	89 7d fc             	mov    DWORD PTR [rbp-0x4],edi
+   7:	83 7d fc 03          	cmp    DWORD PTR [rbp-0x4],0x3
+   b:	74 35                	je     42 <demo_switch+0x42>
+   d:	83 7d fc 03          	cmp    DWORD PTR [rbp-0x4],0x3
+  11:	7f 36                	jg     49 <demo_switch+0x49>
+  13:	83 7d fc 02          	cmp    DWORD PTR [rbp-0x4],0x2
+  17:	74 22                	je     3b <demo_switch+0x3b>
+  19:	83 7d fc 02          	cmp    DWORD PTR [rbp-0x4],0x2
+  1d:	7f 2a                	jg     49 <demo_switch+0x49>
+  1f:	83 7d fc 00          	cmp    DWORD PTR [rbp-0x4],0x0
+  23:	74 08                	je     2d <demo_switch+0x2d>
+  25:	83 7d fc 01          	cmp    DWORD PTR [rbp-0x4],0x1
+  29:	74 09                	je     34 <demo_switch+0x34>
+  2b:	eb 1c                	jmp    49 <demo_switch+0x49>
+  2d:	b8 ad de 00 00       	mov    eax,0xdead
+  32:	eb 1a                	jmp    4e <demo_switch+0x4e>
+  34:	b8 ef be 00 00       	mov    eax,0xbeef
+  39:	eb 13                	jmp    4e <demo_switch+0x4e>
+  3b:	b8 fe ca 00 00       	mov    eax,0xcafe
+  40:	eb 0c                	jmp    4e <demo_switch+0x4e>
+  42:	b8 be ba 00 00       	mov    eax,0xbabe
+  47:	eb 05                	jmp    4e <demo_switch+0x4e>
+  49:	b8 00 00 00 00       	mov    eax,0x0
+  4e:	5d                   	pop    rbp
+  4f:	c3                   	ret

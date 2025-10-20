@@ -1,0 +1,273 @@
+[pid 179095] play->game_init(1, 0x7fff99ef3508, 0x7fff99ef3518, 0x55c3e2288d88) = 0x55c3e65082a0
+[pid 179095] play->game_enumerate_plays(0x55c3e65082a0, 0x55c3e22861e9, 0, 0) = 23
+[pid 179095] play->game_play(0x55c3e65082a0, 1, 0, 0 <unfinished ...>
+[pid 179095] libconnect4.so->check_winner(0x55c3e65082a0, 1, 88, 6) = 0
+[pid 179095] <... game_play resumed> )           = 0
+[pid 179095] play->game_enumerate_plays(0x55c3e65082a0, 0x55c3e22861e9, 0, 0) = 23
+[pid 179095] play->game_play(0x55c3e65082a0, 2, 0, 0 <unfinished ...>
+[pid 179095] libconnect4.so->check_winner(0x55c3e65082a0, 2, 79, 6) = 0
+[pid 179095] <... game_play resumed> )           = 0
+[pid 179095] play->game_enumerate_plays(0x55c3e65082a0, 0x55c3e22861e9, 0, 0) = 23
+[pid 179095] play->game_play(0x55c3e65082a0, 0, 0, 0 <unfinished ...>
+[pid 179095] libconnect4.so->check_winner(0x55c3e65082a0, 0, 88, 6) = 0
+[pid 179095] <... game_play resumed> )           = 0
+[pid 179095] play->game_enumerate_plays(0x55c3e65082a0, 0x55c3e22861e9, 0, 0) = 23
+[pid 179095] play->game_play(0x55c3e65082a0, 3, 0, 0 <unfinished ...>
+[pid 179095] libconnect4.so->check_winner(0x55c3e65082a0, 3, 79, 6) = 0
+[pid 179095] <... game_play resumed> )           = 0
+[pid 179095] play->game_enumerate_plays(0x55c3e65082a0, 0x55c3e22861e9, 0, 0) = 23
+[pid 179095] play->game_play(0x55c3e65082a0, 4, 0, 0 <unfinished ...>
+[pid 179095] libconnect4.so->check_winner(0x55c3e65082a0, 4, 88, 6) = 0
+[pid 179095] <... game_play resumed> )           = 0
+[pid 179095] play->game_enumerate_plays(0x55c3e65082a0, 0x55c3e22861e9, 0, 0) = 23
+[pid 179095] play->game_play(0x55c3e65082a0, 7, 0, 0) = 0xffffffff
+[pid 179095] play->game_enumerate_plays(0x55c3e65082a0, 0x55c3e22861e9, 0, 0) = 23
+[pid 179095] play->game_play(0x55c3e65082a0, 1, 0, 0 <unfinished ...>
+[pid 179095] libconnect4.so->check_winner(0x55c3e65082a0, 1, 79, 6) = 0
+[pid 179095] <... game_play resumed> )           = 0
+[pid 179095] play->game_enumerate_plays(0x55c3e65082a0, 0x55c3e22861e9, 0, 0) = 23
+[pid 179095] play->game_play(0x55c3e65082a0, 2, 0, 0 <unfinished ...>
+[pid 179095] libconnect4.so->check_winner(0x55c3e65082a0, 2, 88, 6) = 0
+[pid 179095] <... game_play resumed> )           = 0
+[pid 179095] play->game_enumerate_plays(0x55c3e65082a0, 0x55c3e22861e9, 0, 0) = 23
+[pid 179095] play->game_play(0x55c3e65082a0, 2, 0, 0 <unfinished ...>
+[pid 179095] libconnect4.so->check_winner(0x55c3e65082a0, 2, 79, 6) = 0
+[pid 179095] <... game_play resumed> )           = 0
+[pid 179095] play->game_enumerate_plays(0x55c3e65082a0, 0x55c3e22861e9, 0, 0It is X's turn
++-+-+-+-+-+-+-+
+| | | | | | | |
++-+-+-+-+-+-+-+
+| | | | | | | |
++-+-+-+-+-+-+-+
+| | | | | | | |
++-+-+-+-+-+-+-+
+| | | | | | | |
++-+-+-+-+-+-+-+
+| | | | | | | |
++-+-+-+-+-+-+-+
+| | | | | | | |
++-+-+-+-+-+-+-+
+
+Available plays:
+  1: Drop in far left
+  2: Drop in column 2
+  3: Drop in column 3
+  4: Drop in middle
+  5: Drop in column 5
+  6: Drop in column 6
+  7: Drop in far right
+Your selection: 
+It is O's turn
++-+-+-+-+-+-+-+
+| | | | | | | |
++-+-+-+-+-+-+-+
+| | | | | | | |
++-+-+-+-+-+-+-+
+| | | | | | | |
++-+-+-+-+-+-+-+
+| | | | | | | |
++-+-+-+-+-+-+-+
+| | | | | | | |
++-+-+-+-+-+-+-+
+| |X| | | | | |
++-+-+-+-+-+-+-+
+
+Available plays:
+  1: Drop in far left
+  2: Drop in column 2
+  3: Drop in column 3
+  4: Drop in middle
+  5: Drop in column 5
+  6: Drop in column 6
+  7: Drop in far right
+Your selection: 
+It is X's turn
++-+-+-+-+-+-+-+
+| | | | | | | |
++-+-+-+-+-+-+-+
+| | | | | | | |
++-+-+-+-+-+-+-+
+| | | | | | | |
++-+-+-+-+-+-+-+
+| | | | | | | |
++-+-+-+-+-+-+-+
+| | | | | | | |
++-+-+-+-+-+-+-+
+| |X|O| | | | |
++-+-+-+-+-+-+-+
+
+Available plays:
+  1: Drop in far left
+  2: Drop in column 2
+  3: Drop in column 3
+  4: Drop in middle
+  5: Drop in column 5
+  6: Drop in column 6
+  7: Drop in far right
+Your selection: 
+It is O's turn
++-+-+-+-+-+-+-+
+| | | | | | | |
++-+-+-+-+-+-+-+
+| | | | | | | |
++-+-+-+-+-+-+-+
+| | | | | | | |
++-+-+-+-+-+-+-+
+| | | | | | | |
++-+-+-+-+-+-+-+
+| | | | | | | |
++-+-+-+-+-+-+-+
+|X|X|O| | | | |
++-+-+-+-+-+-+-+
+
+Available plays:
+  1: Drop in far left
+  2: Drop in column 2
+  3: Drop in column 3
+  4: Drop in middle
+  5: Drop in column 5
+  6: Drop in column 6
+  7: Drop in far right
+Your selection: 
+It is X's turn
++-+-+-+-+-+-+-+
+| | | | | | | |
++-+-+-+-+-+-+-+
+| | | | | | | |
++-+-+-+-+-+-+-+
+| | | | | | | |
++-+-+-+-+-+-+-+
+| | | | | | | |
++-+-+-+-+-+-+-+
+| | | | | | | |
++-+-+-+-+-+-+-+
+|X|X|O|O| | | |
++-+-+-+-+-+-+-+
+
+Available plays:
+  1: Drop in far left
+  2: Drop in column 2
+  3: Drop in column 3
+  4: Drop in middle
+  5: Drop in column 5
+  6: Drop in column 6
+  7: Drop in far right
+Your selection: 
+It is O's turn
++-+-+-+-+-+-+-+
+| | | | | | | |
++-+-+-+-+-+-+-+
+| | | | | | | |
++-+-+-+-+-+-+-+
+| | | | | | | |
++-+-+-+-+-+-+-+
+| | | | | | | |
++-+-+-+-+-+-+-+
+| | | | | | | |
++-+-+-+-+-+-+-+
+|X|X|O|O|X| | |
++-+-+-+-+-+-+-+
+
+Available plays:
+  1: Drop in far left
+  2: Drop in column 2
+  3: Drop in column 3
+  4: Drop in middle
+  5: Drop in column 5
+  6: Drop in column 6
+  7: Drop in far right
+Your selection: 8 is not a legal move O's
++-+-+-+-+-+-+-+
+| | | | | | | |
++-+-+-+-+-+-+-+
+| | | | | | | |
++-+-+-+-+-+-+-+
+| | | | | | | |
++-+-+-+-+-+-+-+
+| | | | | | | |
++-+-+-+-+-+-+-+
+| | | | | | | |
++-+-+-+-+-+-+-+
+|X|X|O|O|X| | |
++-+-+-+-+-+-+-+
+
+Available plays:
+  1: Drop in far left
+  2: Drop in column 2
+  3: Drop in column 3
+  4: Drop in middle
+  5: Drop in column 5
+  6: Drop in column 6
+  7: Drop in far right
+Your selection: 
+It is X's turn
++-+-+-+-+-+-+-+
+| | | | | | | |
++-+-+-+-+-+-+-+
+| | | | | | | |
++-+-+-+-+-+-+-+
+| | | | | | | |
++-+-+-+-+-+-+-+
+| | | | | | | |
++-+-+-+-+-+-+-+
+| |O| | | | | |
++-+-+-+-+-+-+-+
+|X|X|O|O|X| | |
++-+-+-+-+-+-+-+
+
+Available plays:
+  1: Drop in far left
+  2: Drop in column 2
+  3: Drop in column 3
+  4: Drop in middle
+  5: Drop in column 5
+  6: Drop in column 6
+  7: Drop in far right
+Your selection: 
+It is O's turn
++-+-+-+-+-+-+-+
+| | | | | | | |
++-+-+-+-+-+-+-+
+| | | | | | | |
++-+-+-+-+-+-+-+
+| | | | | | | |
++-+-+-+-+-+-+-+
+| | | | | | | |
++-+-+-+-+-+-+-+
+| |O|X| | | | |
++-+-+-+-+-+-+-+
+|X|X|O|O|X| | |
++-+-+-+-+-+-+-+
+
+Available plays:
+  1: Drop in far left
+  2: Drop in column 2
+  3: Drop in column 3
+  4: Drop in middle
+  5: Drop in column 5
+  6: Drop in column 6
+  7: Drop in far right
+Your selection: 
+It is X's turn
++-+-+-+-+-+-+-+
+| | | | | | | |
++-+-+-+-+-+-+-+
+| | | | | | | |
++-+-+-+-+-+-+-+
+| | | | | | | |
++-+-+-+-+-+-+-+
+| | |O| | | | |
++-+-+-+-+-+-+-+
+| |O|X| | | | |
++-+-+-+-+-+-+-+
+|X|X|O|O|X| | |
++-+-+-+-+-+-+-+
+
+Available plays:
+  1: Drop in far left
+  2: Drop in column 2
+  3: Drop in column 3
+  4: Drop in middle
+  5: Drop in column 5
+  6: Drop in column 6
+  7: Drop in far) = 23
