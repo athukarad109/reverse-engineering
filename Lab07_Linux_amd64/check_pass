@@ -1,0 +1,8 @@
+#!/usr/bin/env python3
+
+import sys
+
+print(sys.argv)
+
+if sys.argv[1] == "johndoe" and sys.argv[2] == "password":
+    sys.exit(0xaf)
