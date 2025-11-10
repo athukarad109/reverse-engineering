@@ -1,0 +1,79 @@
+execve("./vulnerable", ["./vulnerable"], 0x7ffddbfd80f0 /* 55 vars */) = 0
+brk(NULL)                               = 0x5607d6c1b000
+mmap(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7fef0db6d000
+access("/etc/ld.so.preload", R_OK)      = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "/etc/ld.so.cache", O_RDONLY|O_CLOEXEC) = 3
+fstat(3, {st_mode=S_IFREG|0644, st_size=118414, ...}) = 0
+mmap(NULL, 118414, PROT_READ, MAP_PRIVATE, 3, 0) = 0x7fef0db50000
+close(3)                                = 0
+openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libc.so.6", O_RDONLY|O_CLOEXEC) = 3
+read(3, "\177ELF\2\1\1\3\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0p\236\2\0\0\0\0\0"..., 832) = 832
+pread64(3, "\6\0\0\0\4\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0"..., 840, 64) = 840
+fstat(3, {st_mode=S_IFREG|0755, st_size=2003408, ...}) = 0
+pread64(3, "\6\0\0\0\4\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0"..., 840, 64) = 840
+mmap(NULL, 2055800, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7fef0d95a000
+mmap(0x7fef0d982000, 1462272, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x28000) = 0x7fef0d982000
+mmap(0x7fef0dae7000, 352256, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x18d000) = 0x7fef0dae7000
+mmap(0x7fef0db3d000, 24576, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x1e2000) = 0x7fef0db3d000
+mmap(0x7fef0db43000, 52856, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x7fef0db43000
+close(3)                                = 0
+mmap(NULL, 12288, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7fef0d957000
+arch_prctl(ARCH_SET_FS, 0x7fef0d957740) = 0
+set_tid_address(0x7fef0d957a10)         = 30907
+set_robust_list(0x7fef0d957a20, 24)     = 0
+rseq(0x7fef0d957680, 0x20, 0, 0x53053053) = 0
+mprotect(0x7fef0db3d000, 16384, PROT_READ) = 0
+mprotect(0x5607a3bcf000, 4096, PROT_READ) = 0
+mprotect(0x7fef0dba9000, 8192, PROT_READ) = 0
+prlimit64(0, RLIMIT_STACK, NULL, {rlim_cur=8192*1024, rlim_max=RLIM64_INFINITY}) = 0
+munmap(0x7fef0db50000, 118414)          = 0
+socket(AF_INET, SOCK_STREAM, IPPROTO_TCP) = 3
+setsockopt(3, SOL_SOCKET, SO_REUSEADDR, [1], 4) = 0
+bind(3, {sa_family=AF_INET, sin_port=htons(7664), sin_addr=inet_addr("0.0.0.0")}, 16) = 0
+listen(3, 10)                           = 0
+accept(3, {sa_family=AF_INET, sin_port=htons(53024), sin_addr=inet_addr("10.0.2.15")}, [16]) = 4
+fstat(1, {st_mode=S_IFCHR|0600, st_rdev=makedev(0x88, 0), ...}) = 0
+getrandom("\xe1\xd3\x90\x86\x32\x4b\x5c\xab", 8, GRND_NONBLOCK) = 8
+brk(NULL)                               = 0x5607d6c1b000
+brk(0x5607d6c3c000)                     = 0x5607d6c3c000
+write(1, "Client connected: 10.0.2.15:8399"..., 33Client connected: 10.0.2.15:8399
+) = 33
+rt_sigaction(SIGRT_1, {sa_handler=0x7fef0d9ea4b0, sa_mask=[], sa_flags=SA_RESTORER|SA_ONSTACK|SA_RESTART|SA_SIGINFO, sa_restorer=0x7fef0d999df0}, NULL, 8) = 0
+rt_sigprocmask(SIG_UNBLOCK, [RTMIN RT_1], NULL, 8) = 0
+mmap(NULL, 8392704, PROT_NONE, MAP_PRIVATE|MAP_ANONYMOUS|MAP_STACK, -1, 0) = 0x7fef0d156000
+mprotect(0x7fef0d157000, 8388608, PROT_READ|PROT_WRITE) = 0
+rt_sigprocmask(SIG_BLOCK, ~[], [], 8)   = 0
+clone3({flags=CLONE_VM|CLONE_FS|CLONE_FILES|CLONE_SIGHAND|CLONE_THREAD|CLONE_SYSVSEM|CLONE_SETTLS|CLONE_PARENT_SETTID|CLONE_CHILD_CLEARTID, child_tid=0x7fef0d956990, parent_tid=0x7fef0d956990, exit_signal=0, stack=0x7fef0d156000, stack_size=0x7fff80, tls=0x7fef0d9566c0} => {parent_tid=[31065]}, 88) = 31065
+rt_sigprocmask(SIG_SETMASK, []Cannot SET_SECRET without authentication
+, NULL, 8) = 0
+accept(3, {sa_family=AF_INET, sin_port=htons(53034), sin_addr=inet_addr("10.0.2.15")}, [16]) = 4
+write(1, "Client connected: 10.0.2.15:1095"..., 34Client connected: 10.0.2.15:10959
+) = 34
+rt_sigprocmask(SIG_BLOCK, ~[], [], 8)   = 0
+clone3({flags=CLONE_VM|CLONE_FS|CLONE_FILES|CLONE_SIGHAND|CLONE_THREAD|CLONE_SYSVSEM|CLONE_SETTLS|CLONE_PARENT_SETTID|CLONE_CHILD_CLEARTID, child_tid=0x7fef0d956990, parent_tid=0x7fef0d956990, exit_signal=0, stack=0x7fef0d156000, stack_size=0x7fff80, tls=0x7fef0d9566c0}Cannot GET_SECRET without authentication
+ => {parent_tid=[31066]}, 88) = 31066
+rt_sigprocmask(SIG_SETMASK, [], NULL, 8) = 0
+accept(3, {sa_family=AF_INET, sin_port=htons(53036), sin_addr=inet_addr("10.0.2.15")}, [16]) = 4
+write(1, "Client connected: 10.0.2.15:1147"..., 34Client connected: 10.0.2.15:11471
+) = 34
+rt_sigprocmask(SIG_BLOCK, ~[], [], 8)   = 0
+clone3({flags=CLONE_VM|CLONE_FS|CLONE_FILES|CLONE_SIGHAND|CLONE_THREAD|CLONE_SYSVSEM|CLONE_SETTLS|CLONE_PARENT_SETTID|CLONE_CHILD_CLEARTID, child_tid=0x7fef0d956990, parent_tid=0x7fef0d956990, exit_signal=0, stack=0x7fef0d156000, stack_size=0x7fff80, tls=0x7fef0d9566c0} => {parent_tid=[31067]}, 88) = 31067
+user_addr: 0x7fef08000b90
+rt_sigprocmask(SIG_SETMASK, []Success: SET_USER = 'bob'
+, NULL, 8) = 0
+accept(3pass_addr: 0x7fef08000bb0
+/usr/bin/env: ‘python3\r’: No such file or directory
+/usr/bin/env: use -[v]S to pass options in shebang lines
+check_pass exited with: 0x7f
+, {sa_family=AF_INET, sin_port=htons(53050), sin_addr=inet_addr("10.0.2.15")}, [16]) = 5
+write(1, "Client connected: 10.0.2.15:1505"..., 34Client connected: 10.0.2.15:15055
+) = 34
+rt_sigprocmask(SIG_BLOCK, ~[], [], 8)   = 0
+clone3({flags=CLONE_VM|CLONE_FS|CLONE_FILES|CLONE_SIGHAND|CLONE_THREAD|CLONE_SYSVSEM|CLONE_SETTLS|CLONE_PARENT_SETTID|CLONE_CHILD_CLEARTID, child_tid=0x7fef0d956990, parent_tid=0x7fef0d956990, exit_signal=0, stack=0x7fef0d156000, stack_size=0x7fff80, tls=0x7fef0d9566c0} => {parent_tid=[31069]}, 88) = 31069
+user_addr: 0x7fef08000b70
+rt_sigprocmask(SIG_SETMASK, []Success: SET_USER = 'johndoe'
+, NULL, 8) = 0
+accept(3pass_addr: 0x7fef08000bb0
+/usr/bin/env: ‘python3\r’: No such file or directory
+/usr/bin/env: use -[v]S to pass options in shebang lines
+check_pass exited with: 0x7f
