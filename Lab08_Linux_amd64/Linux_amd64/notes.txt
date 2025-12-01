@@ -1,0 +1,28 @@
+Ghidra static analysis 
+
+in_FS_OFFSET - added by debugger
+
+reclass.ddns.net, 27960
+
+sends getlogin, gethostname
+
+temp is used as temperary buffer which holds username and hostname as sends it 
+
+        00102ab8 f3 48 ab        STOSQ.REP  RDI
+
+              for (lVar8 = 0x20; lVar8 != 0; lVar8 = lVar8 + -1) {
+                temp[0] = '\0';
+                temp[1] = '\0';
+                temp[2] = '\0';
+                temp[3] = '\0';
+                temp[4] = '\0';
+                temp[5] = '\0';
+                temp[6] = '\0';
+                temp[7] = '\0';
+                temp = temp + ((ulong)bVar11 * -2 + 1) * 8;
+              }
+              
+This is essentially memset
+
+message type - 4 - send username
+message type - 5 - send hostname
