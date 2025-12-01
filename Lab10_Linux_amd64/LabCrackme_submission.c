@@ -39,7 +39,7 @@ BOOL doCheckConvert(char user[], char keychars[])
 
 	// DEBUGLINE;
 
-	// SALT;
+	SALT;
 
 	if (strlen(keychars) != 32)
 	{
@@ -209,7 +209,7 @@ void generateKey(char* user){
 
 int main(int argc, char *argv[])
 {
-# if 0
+
 	if (-1 == ptrace(PTRACE_TRACEME)){
 		printf("You lose\n");
 #ifdef _DEBUG
@@ -217,7 +217,6 @@ int main(int argc, char *argv[])
 #endif
 		return FALSE;
 	}
-# endif
 
 	
 	ERR_load_crypto_strings();
