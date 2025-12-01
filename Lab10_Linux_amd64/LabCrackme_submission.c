@@ -39,7 +39,7 @@ BOOL doCheckConvert(char user[], char keychars[])
 
 	// DEBUGLINE;
 
-	SALT;
+	// SALT;
 
 	if (strlen(keychars) != 32)
 	{
@@ -144,20 +144,24 @@ BOOL doCheck(char user[], unsigned char *key)
 	printf("foldUser = %04x, foldKey = %04x\n", foldUser, foldKey);
 #endif
 
+uint32_t tmp = foldUser;   
+
 asm volatile(
     ".intel_syntax noprefix\n"
-    "    push rax\n"
-    "    mov  rax, 2\n"
-    "    cmp  rax, 2\n"
-    "    je   1f\n"           // jump when equal (always), skip junk
-    "    .byte 0x0f\n"        // never executed at runtime
-    "1:\n"
-    "    pop  rax\n"
+    "    mov eax, %0\n"              
+    "    xor eax, 0xDEADBEEF\n"      
+    "    xor eax, 0xDEADBEEF\n"      
+    "    add eax, 1\n"               
+    "    sub eax, 1\n"               
+    "    mov %0, eax\n"              
     ".att_syntax prefix\n"
+    : "+r"(tmp)                      
     :
-    :
-    : "rax"
+    : "eax"                          
 );
+
+foldUser = (WORD)tmp;                
+
 
 	return (foldUser == foldKey);
 }
